@@ -21,8 +21,8 @@ public class testCase2_Add_toCart {
 		driver.get("https://www.myntra.com/");
 		driver.findElement(By.className("desktop-searchBar")).sendKeys("Shoes",Keys.ENTER);
 		//click add to wishlist
-		Thread.sleep(2000);
-		WebElement product = driver.findElement(By.xpath("(//span[@class='product-wishlistFlex product-actionsButton product-wishlist'])[1]"));		
+		Thread.sleep(3000);
+		WebElement product = driver.findElement( By.xpath("(//span[contains(@class,'product-wishlist')])[1]"));		
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click()",product);
